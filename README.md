@@ -21,7 +21,7 @@ $ git clone https://github.com/pmarsiglia93/Projeto-Corebiz.git
 ```
 ### Acesse a pasta do projeto no terminal/cmd
 ```
-$ cd myapp
+$ cd my-app
 ```
 ### Instale as dependências
 ```
