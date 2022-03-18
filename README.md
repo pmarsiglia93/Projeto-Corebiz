@@ -3,6 +3,12 @@ Site de e-commerce com API de Get e Post.
 
 
 ## Como rodar
+Entrar pelo Lnk:
+---
+https://projeto-corebiz-pmarsiglia.netlify.app/
+--
+
+Ou
 
 Abrir o Vs Code e entrar no terminal:
 ---
