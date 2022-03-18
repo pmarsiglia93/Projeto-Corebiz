@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+
+.slick-dots{
+    margin-left:0;
+}
+
+.slick-dots li.slick-active button:before{
+    color: red;
+}
+
+.image-slider{
+    width: 100%;
+    height: auto;
+}
+
+.text-slider{
+    position: absolute;
+    left: 13%;    
+    width: 430px;
+    color: white;
+}
+
+.sub-slider{
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.title-slider{
+    font-family: "Nunito";
+    font-weight: 900;
+    font-size: 2.8rem;
+}
+
+@media screen and (max-width: 600px){
+
+  .slick-dots{
+    margin-left:0;
+}
+
+.slick-dots li.slick-active button:before{
+    color: red;
+}
+
+.image-slider{
+    width: 100%;
+    height: auto;
+}
+
+.text-slider{
+    position: absolute;
+    left: 13%;    
+    width: 430px;
+    color: white;
+}
+
+.sub-slider{
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.title-slider{
+    font-family: "Nunito";
+    font-weight: 900;
+    font-size: 2.8rem;
+}
+@media screen and (max-width: 375px){ 
+  .text-slider {
+      position: absolute;
+      left: 22%;
+      top: 21%;
+      width: 131px;
+      color: white;
+    }
+    .subtitle-slider{
+      font-size: 0.6rem;
+    }
+    .title-slider{
+      font-size: 0.8rem;
+    }
+    .image-slider{
+      height: 191.2px;
+      object-fit: cover;
+    }
+}
+  
+  }
+  
+
+

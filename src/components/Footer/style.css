@@ -1,0 +1,75 @@
+.footer{
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.footer-container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 16px 0;
+    width: 100%;    
+}
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito";
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.contatos > a {
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    font-size: 12px;
+    height: 40px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    text-decoration: none;
+    width: 150px;
+  }
+
+ .contatos > a > span {
+    width: 90%;
+  }
+  
+
+.contatos > a > img {
+    margin-right: 10px;
+    width: 10%;
+  }
+
+.buttons{
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  display: flex;
+  font-size: 12px;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 0 12px;
+  text-decoration: none;
+  width: 195px;  
+}
+
+.info-img a{
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.info-img p{
+    margin-bottom: 0;
+}
+
