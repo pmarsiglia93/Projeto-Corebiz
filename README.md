@@ -17,7 +17,7 @@ $ npm install react-slick --save
 
 ### Clone este repositório
 ```
-$ git clone <https://github.com/thaysrq/corebiztestee.git>
+$ git clone https://github.com/pmarsiglia93/Projeto-Corebiz.git
 ```
 ### Acesse a pasta do projeto no terminal/cmd
 ```
