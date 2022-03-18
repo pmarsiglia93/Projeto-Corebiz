@@ -1,5 +1,5 @@
 # Corebiz 
-Site de e-commerce.
+Site de e-commerce com API de Get e Post.
 
 
 ## Como rodar
@@ -21,7 +21,7 @@ $ git clone <https://github.com/thaysrq/corebiztestee.git>
 ```
 ### Acesse a pasta do projeto no terminal/cmd
 ```
-$ cd corebiztestee
+$ cd myapp
 ```
 ### Instale as dependências
 ```
