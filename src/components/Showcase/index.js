@@ -10,7 +10,8 @@ class Showcase extends React.Component {
         products: []
      }
 
-    async componentDidMount() {
+    //Puxando a API
+     async componentDidMount() {
         Axios.get('https://corebiz-test.herokuapp.com/api/v1/products')
             .then(res => {
                 let products = res.data;
@@ -18,6 +19,7 @@ class Showcase extends React.Component {
             })
     }
 
+    //Ele vai pegar a imagem de uma estrela, dependendo da quantidade de estrelas da API
     starsComplete(starsCount) {
         let starsList = []
 
@@ -29,10 +31,11 @@ class Showcase extends React.Component {
         return starsList;
     }
 
+    //Organizando o valor do produto
     convertNumber(price)
     {
         const convertedNumber = price / 100;
-        return convertedNumber.toFixed(2).toLocaleString("pt-BR");
+        return convertedNumber.toFixed(2);
     }
 
     render() { 
@@ -45,18 +48,36 @@ class Showcase extends React.Component {
                         <hr />
                             <ul className="products">
                                 { 
+                                    //map, roda essa lista de produtos.
+                                    //parecido com um for
                                     this.state.products.map((product) => 
+                                        
                                         <li key={product.productName} className="product">
+
                                             <img src={product.imageUrl} alt="Product Image" />
+                                    
                                             {product.listPrice ? <div className="flag-discount"></div> : null }
+
                                             <div className="card-info">
+                                                
+                                                {/*Nome do Produto*/}
                                                 <p className="product-name">{product.productName}</p>
-                                                <div className="stars">
-                                                    { this.starsComplete(product.stars) }
-                                                </div>
+                                                    
+                                                {/*Estrelas de avaliação*/}
+                                                    <div className="stars">
+                                                        { this.starsComplete(product.stars) }
+                                                    </div>
+                                                    
+                                                {/*Valor sem desconto*/}
                                                 <p className="old-price">{product.listPrice != null ? "de R$ " + this.convertNumber(product.listPrice) : null }</p>
+                                                
+                                                {/*Valor Total do Produto*/}
                                                 <p className="current-price">por R$ {this.convertNumber(product.price)}</p>
+
+                                                {/*Parcelamento*/}
                                                 <p className="installments">{product.installments.length > 0 ? "ou em " + product.installments[0].quantity + "x de R$ " + this.convertNumber(product.installments[0].value) : null }</p>
+                                                
+                                                {/*Botão de comprar*/}
                                                 <button className="buy" onClick={() => addProducts(product)}>Comprar</button>
                                             </div>
                                         </li>
@@ -66,6 +87,7 @@ class Showcase extends React.Component {
                         </div>
                     </div> 
                 )}
+                {/*O consumer está usando as coisas do Provider*/}
             </ShoppingCartContext.Consumer>
         );
     }

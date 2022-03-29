@@ -10,12 +10,11 @@ import ShoppingCartContext from "./contexts/ShoppingCartContext";
 
 class App extends React.Component {
   state = {
-    // Propriedade
-    cart: [],
+      cart: [],
     // Modulo
     // O updateCart vai pegar essa classe toda, ele tá chamando o cart:[] e inserir um novo produto.
     addProducts: (newProduct) => {
-      let updatedCart = [...this.state.cart, newProduct];      
+      let updatedCart = [...this.state.cart, newProduct]; //Copy - Copia o estado desse carrinho!  
       
       // Nessa classe, ela cria um nova propriedade chamada setState que vai atualizar o carrinho
       this.setState({
@@ -31,7 +30,7 @@ class App extends React.Component {
 
   // Isso é uma outra função 
 
-  
+  //O ComponentDiMount ele mantem o valor no carrinho! 
   componentDidMount() {
     let cartItems = JSON.parse(window.localStorage.getItem("cartItems"));
 
@@ -45,19 +44,22 @@ class App extends React.Component {
 
   render() {
     return (
+      
       <ShoppingCartContext.Provider value={this.state}>
+        
         <div>
           <Header />
           <Carousel />
           <Showcase />
           <Newsletter />
-          <Footer />
-         
-          
+          <Footer />         
         </div>
+
       </ShoppingCartContext.Provider>
     );
   }
 }
 
 export default App;
+
+// O Provider é o meu carrinho vazio.
